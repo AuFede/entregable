@@ -1,5 +1,16 @@
 const Producto = require("../models/producto");
 
+const productosGet = (req, res) => {
+
+    const { limite } = req.query;
+
+    res.status(200).json({
+
+        msg: 'GET PRODUCTOS',
+        limite
+    })
+
+}
 
 const productosPost = async (req, res) => {
 
@@ -16,8 +27,35 @@ const productosPost = async (req, res) => {
         })
     
     }
-    
+
+const productosPut = (req, res) => {
+
+    const { id } = req.params;
+
+    res.status(200).json({
+
+        msg: 'PUT PRODUCTOS',
+        id
+    })
+
+}
+
+const productosDelete = (req, res) => {
+
+    const { id } = req.params;
+
+    res.status(200).json({
+
+        msg: 'DELETE PRODUCTOS',
+        id
+    })
+
+}
+
 
 module.exports = {
-    productosPost
+    productosGet,
+    productosPost,
+    productosPut,
+    productosDelete
 }

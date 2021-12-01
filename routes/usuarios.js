@@ -2,15 +2,15 @@ const { Router } = require('express');
 const { usuariosGet,usuariosPost,usuariosPut,usuariosDelete } = require ('../controllers/usuarios');
 
 
-const router = Router()
+const router = Router();
 
 // Acá se hace el CRUD
 
 router.get('/', usuariosGet);
 
-router.post('/', usuariosPost)
+router.post('/', usuariosPost);
 
-router.put('/:id', usuariosPut)
+router.put('/:id', usuariosPut);
 
 router.delete('/:id', usuariosDelete)
 
