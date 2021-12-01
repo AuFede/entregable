@@ -2,6 +2,7 @@
 
 const express = require ('express');
 const cors = require ('cors');
+const { dbConnection } = require('../database/config');
 
 // Por convención la clase Server siempre va con mayúscula.
 
@@ -17,8 +18,14 @@ class Server{
         this.middlewares();
 
         // Rutas de mi aplicación.
-        this.routes()
+        this.routes();
 
+        // Conectar a la base de datos.
+        this.conectarDB()
+    }
+
+    async conectarDB(){
+        await dbConnection()
     }
 
     // Cuando se usa "use", estoy frente a un Middleware.
