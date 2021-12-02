@@ -13,6 +13,11 @@ const ProductoSchema = Schema({
         required: [true, 'Introduza un nombre de referencia del Autor'],
         unique: true
     },
+    género: {
+        type: String,
+        required: [true, 'Introduza un posible género literario'],
+        unique: true
+    },
     estado: {
         type: Boolean,
         default: true
