@@ -5,7 +5,7 @@ Sobre el Proyecto que estamos realizando, les dejo el link del repo por las duda
 Realizar la entidad Producto y que se guarden productos en la base de datos además de los usuarios.
 
 
-Los pasos para realizar la actividad son las siguientes:
+Los pasos para realizar la actividad son los siguientes:
 
 1.	Crear un modelo de producto con las siguientes propiedades:
 

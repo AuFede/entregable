@@ -2,9 +2,15 @@ const { Schema, model } = require('mongoose')
 
 
 const ProductoSchema = Schema({
+
     nombre: {
         type: String,
-        required: [true, 'Acá poner algo'],
+        required: [true, 'Introduzca el título de la Obra'],
+        unique: true
+    },
+    autor: {
+        type: String,
+        required: [true, 'Introduza un nombre de referencia del Autor'],
         unique: true
     },
     estado: {
@@ -17,7 +23,7 @@ const ProductoSchema = Schema({
     },
     descripción: {
         type: String,
-        required: ['Acá va la descripción']
+        required: [true,'Para obtener la descripción, introduzca alguna palabra válida'],
     }
     
 })
